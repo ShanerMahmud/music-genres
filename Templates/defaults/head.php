@@ -27,6 +27,11 @@ nav {
         .loginForm {
             width: 18%;
         }
+        .hoverRed:hover {
+
+                color: red;
+
+        }
     </style>
 </head>
 <body>
