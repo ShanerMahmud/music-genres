@@ -1,8 +1,11 @@
 <?php
 include_once "defaults/head.php";
-include_once "defaults/nav.php";
+if(isset($_SESSION['user'])){
+    header("Location: member");
+} else {
+    include_once "defaults/nav.php";
+}
 include_once "defaults/header.php";
-
 ?>
 
 <div class="img-header" style="">
@@ -17,11 +20,11 @@ include_once "defaults/header.php";
             <form method="POST" class="p-2">
                 <div class="form-group text-center">
                     <label class="pb-2" for="formUsername">Email</label>
-                    <input type="text" class="form-control" id="formUsername" ><br>
+                    <input name="email" type="text" class="form-control" id="formUsername" ><br>
                 </div>
                 <div class="form-group text-center p-1">
                     <label class="pb-2" for="formPassword">Password</label>
-                    <input type="password" class="form-control" id="formPassword" ><br>
+                    <input name="password" type="password" class="form-control" id="formPassword" ><br>
                 </div>
                 <div class="text-center">
                     <input class="btn btn-dark text-white mb-3" type="submit" name="login" value="Sign in">
@@ -30,6 +33,16 @@ include_once "defaults/header.php";
         </div>
     </div>
 </div>
+
+<?php
+
+global $user;
+
+if($user && is_string($user)){
+    echo $user;
+}
+
+?>
 
 
 

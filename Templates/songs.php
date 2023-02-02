@@ -1,8 +1,11 @@
 <?php
 include_once "defaults/head.php";
-include_once "defaults/nav.php";
+if(isset($_SESSION['user'])){
+    include_once "defaults/nav2.php";
+} else {
+    include_once "defaults/nav.php";
+}
 include_once "defaults/header.php";
-
 global $songs;
 ?>
 
