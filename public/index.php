@@ -1,5 +1,7 @@
 <?php
-
+require "../Modules/db.php";
+require "../Modules/genres.php";
+require "../Modules/songs.php";
 
 session_start();
 
@@ -17,7 +19,14 @@ switch ($param[1]){
 
     case 'genres':
 //        var_dump("genres");
+        $genres = getGenres();
         include_once "../Templates/genres.php";
+        break;
+
+    case 'song':
+//        var_dump("songs");
+        $genres = getSongs();
+        include_once "../Templates/songs.php";
         break;
 
     case 'contact':
