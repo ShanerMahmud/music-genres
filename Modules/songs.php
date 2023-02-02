@@ -1,8 +1,14 @@
 <?php
 include_once "../Class/Song.php";
 
-function getSongs(){
+function getSongsByGenre($id){
     global $db;
-    $songs = $db->query('SELECT * FROM song')->fetchAll(PDO::FETCH_CLASS, 'Genre');
+    $songs = $db->query('SELECT * FROM song WHERE genre_id='.$id)->fetchAll(PDO::FETCH_CLASS, 'Song');
     return $songs;
+}
+
+function getSong($id){
+    global $db;
+    $song = $db->query('SELECT * FROM song WHERE id='.$id)->fetchAll(PDO::FETCH_CLASS, 'Song');
+    return $song;
 }
