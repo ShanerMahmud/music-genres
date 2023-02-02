@@ -28,6 +28,10 @@ switch ($param[1]){
     case 'song':
         $id = $param[2];
         $song = getSong($id);
+        $review = getReview($id);
+//        var_dump($review);
+//        die();
+//        $user = getUser($review[0]->user_id);
         include_once "../Templates/song.php";
         break;
 

@@ -22,7 +22,7 @@ nav {
         .heather-img {
             filter: brightness(0.5);
             object-fit: cover;
-            height: 850px;
+            height: 380px;
         }
         .loginForm {
             width: 18%;
