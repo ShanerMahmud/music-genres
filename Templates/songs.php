@@ -8,22 +8,24 @@ global $songs;
 
 
 
-<div class="img-header" style="position: relative">
+<div class="img-header"">
     <img src="../img/Heather.jpg" alt="image" class="img-fluid heather-img w-100">
 </div>
 
 
 
-<div class="row text-center border border-dark rounded container px-0 w-50" style="position: absolute; top: 30%; left: 16%; filter: opacity(1)">
+<div class="container py-5">
+    <div class="row text-center border border-dark rounded container px-0" style="filter: opacity(1)">
 
-    <?php foreach ($songs as $song): ?>
-    <div class="px-0 bg-dark m-3 rounded" style="width: 200px">
-        <a class='hoverRed btn btn-dark text-primary text-decoration-none h-100 w-100 rounded p-0' href="/song/<?= $song->id ?>">
-            <div style="font-size: 17pt;" class="h-100 hoverRed card-title text-center""><?= $song->name ?> By <?= $song->artist ?></div>
-    </a>
+        <?php foreach ($songs as $song): ?>
+        <div class="px-0 bg-dark m-3 rounded" style="width: 200px">
+            <a class='hoverRed btn btn-dark text-primary text-decoration-none h-100 w-100 rounded p-0' href="/song/<?= $song->id ?>">
+                <div style="font-size: 17pt;" class="h-100 hoverRed card-title text-center""><?= $song->name ?> By <?= $song->artist ?></div>
+        </a>
+    </div>
+    <?php endforeach; ?>
+
 </div>
-<?php endforeach; ?>
-
 </div>
 
 
