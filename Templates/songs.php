@@ -17,19 +17,21 @@ global $songs;
 
 
 
-<div class="container py-5">
-    <div class="row text-center border border-dark rounded container px-0" style="filter: opacity(1)">
-
+<div class="container-fluid bg-dark py-5 d-flex align-items-center justify-content-center">
+    <div class="hoverRed row d-flex text-center border border-dark rounded container px-0">
         <?php foreach ($songs as $song): ?>
-        <div class="px-0 bg-dark m-3 rounded" style="width: 200px">
-            <a class='hoverRed btn btn-dark text-primary text-decoration-none h-100 w-100 rounded p-0' href="/song/<?= $song->id ?>">
-                <div style="font-size: 17pt;" class="h-100 hoverRed card-title text-center""><?= $song->name ?> By <?= $song->artist ?></div>
-        </a>
-    </div>
-    <?php endforeach; ?>
+            <div class="px-1 py-1 d-flex align-items-center justify-content-center col-4 bg-dark hoverRed rounded text-center">
+                <a class='border hoverRed btn btn-dark text-primary text-decoration-none w-100 rounded p-0 g-0 text-center d-flex align-items-center justify-content-center' href="/song/<?= $song->id ?>">
+                    <div style="font-size: 16pt;" class="hoverRed card-title">
+                        <?= $song->artist ?> - <?= $song->name ?>
 
+                    </div>
+                </a>
+            </div>
+        <?php endforeach; ?>
+    </div>
 </div>
-</div>
+
 
 
 

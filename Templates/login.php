@@ -13,7 +13,7 @@ include_once "defaults/header.php";
 </div>
 
 
-<div class="container my-5">
+<div class="container-fluid bg-dark py-5 d-flex align-items-center justify-content-center">
     <div class="loginForm border rounded border-white container bg-light" style="filter: opacity(1)">
         <div class="container">
             <h1 class="text-center pt-3">Login</h1>
@@ -28,21 +28,26 @@ include_once "defaults/header.php";
                 </div>
                 <div class="text-center">
                     <input class="btn btn-dark text-white mb-3" type="submit" name="login" value="Sign in">
+                    <br>
+                    <?php
+
+                    global $user;
+
+                    if($user && is_string($user)){
+                        echo $user;
+                    }
+
+                    ?>
                 </div>
             </form>
         </div>
     </div>
 </div>
 
-<?php
 
-global $user;
 
-if($user && is_string($user)){
-    echo $user;
-}
 
-?>
+
 
 
 

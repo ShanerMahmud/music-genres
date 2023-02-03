@@ -15,28 +15,35 @@ include_once "defaults/header.php";
 </div>
 
 
-<div class="container my-5 rounded">
-    <div class="w-50 border rounded border-white container bg-light p-4" style="filter: opacity(1)">
-        <div class="container">
-            <h1 class="text-center">Contact US</h1>
-            <form class="p-4">
-                <div class="form-group">
-                    <label for="formName">Name</label>
-                    <input type="text" class="form-control" id="formName" placeholder="Enter your name">
-                </div>
-                <div class="form-group">
-                    <label for="formEmail">Email</label>
-                    <input type="email" class="form-control" id="formEmail" placeholder="Enter your email">
-                </div>
-                <div class="form-group">
-                    <label for="formMessage">Message</label>
-                    <textarea class="form-control" id="formMessage" rows="3" placeholder="Enter your message"></textarea>
-                </div>
-                <button type="submit" class="btn btn-primary">Submit</button>
-            </form>
+
+<div class="container-fluid bg-dark py-5 d-flex align-items-center justify-content-center">
+    <div class="container">
+        <div class="w-50 border rounded border-white container bg-light p-4" style="filter: opacity(1)">
+            <div class="container">
+                <h1 class="text-center">Contact US</h1>
+                <form method="POST" class="p-4">
+                    <div class="form-group">
+                        <label class="" for="formName">Name</label>
+                        <input type="text" class="mb-2 form-control" id="formName" placeholder="Enter your name">
+                    </div>
+                    <div class="form-group">
+                        <label class="" for="formEmail">Email</label>
+                        <input type="email" class="mb-2 form-control" id="formEmail" placeholder="Enter your email">
+                    </div>
+                    <div class="form-group">
+                        <label class="" for="formMessage">Message</label>
+                        <textarea class="mb-2 form-control" id="formMessage" rows="3" placeholder="Enter your message"></textarea>
+                    </div>
+                    <button type="submit" class="mt-1 btn btn-primary">Submit</button>
+                </form>
+            </div>
         </div>
     </div>
 </div>
+
+
+
+
 
 
 

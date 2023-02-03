@@ -18,38 +18,35 @@ global $review;
 
 
 
-<div class="container-py-5">
-    <div class="row text-center border border-dark rounded container px-0 w-50" style="filter: opacity(1)">
+<div class="container-fluid bg-dark py-5 d-flex align-items-center justify-content-center">
 
         <?php foreach ($song as $s): ?>
-        <div class="card px-0 bg-dark m-3 rounded" style="width: 200px">
+        <div class="card px-0 bg-dark d-flex justify-content-center align-items-center rounded border-primary-subtle" style="width: 350px">
             <img src="../img/songs/<?=$s->img?>" class="card-img-top" alt="imageCard">
-            <div style="font-size: 17pt;" class="h-100 hoverRed card-body text-center"">  </div>
-        <h5 class="card-title text-primary"><?= $s->name ?> <br> By <br> <?= $s->artist ?></h5>
-        <p class="card-text text-secondary"><i><?= $s->detail ?></i></p>
-    </div>
-</div>
 
-
-
-    </a>
-    </div>
-<?php endforeach; ?>
+            <h5 class="card-title text-primary text-center pt-3"><?= $s->name ?> <br> By <br> <?= $s->artist ?></h5>
+            <p class="card-text text-center text-secondary pb-3"><i><?= $s->detail ?></i></p>
+            <?php endforeach; ?>
+        </div>
 
 </div>
-</div>
 
+<div class="container-fluid bg-dark p-0 m-0  pb-3 pt-3">
+    <div class="container bg-dark">
         <?php foreach ($review as $rev): ?>
-        <div class="card px-0 bg-dark m-3 py-3 px-3 rounded">
-        <h5 class="card-text text-primary"><?php $user=getUser($rev->user_id); echo $user[0]->first_name . ' ' . $user[0]->last_name . ' (' . $user[0]->email . ')'; ?><br></h5>
-        <p class="text-secondary"><i>posted on: <?= $rev->date ?> </i></p>
-        <br>
-        <p class="card-title text-light"><?= $rev->comment ?> <br> <br>  </p>
+            <div class="bg-dark border border-primary-subtle card m-0 px-5 mb-3">
+                <h5 class="text-center card-text text-primary"><?php $user=getUser($rev->user_id); echo $user[0]->first_name . ' ' . $user[0]->last_name . ' (' . $user[0]->email . ')'; ?><br></h5>
+                <p class="text-center text-secondary border-bottom pb-1"><i>posted on: <?= $rev->date ?> </i></p>
+
+                <p class="text-center card-title text-light">"<?= $rev->comment ?>" <br> <br>  </p>
+
+
+            </div>
+        <?php endforeach; ?>
 
     </div>
-<?php endforeach; ?>
-
 </div>
+    </div>
 </div>
 
 <?php

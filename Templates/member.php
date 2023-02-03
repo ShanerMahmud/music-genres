@@ -15,7 +15,7 @@ include_once "defaults/header.php";
 <div class="container-fluid py-5 bg-dark">
 
     <div class="text-center" style="">
-        <h2 class="text-center text-light py-2" style="user-select: none; font-size: 35pt;"><?php echo "Welcome " . $_SESSION['user']->first_name . " " . $_SESSION['user']->last_name . " <i>" . $_SESSION['user']->email . "</i>"; ?></h2>
+        <h2 class="text-center text-light py-2" style="user-select: none; font-size: 35pt;"><?php echo "Welcome " . $_SESSION['user']->first_name . " " . $_SESSION['user']->last_name . " <br> <i>" . $_SESSION['user']->email . "</i>"; ?></h2>
         <a href="name" class="btn btn-primary text-light mb-2 btn-lg" style="width: 250px; font-size: 20pt;">Change Name</a> &emsp
         <a href="password" class="btn btn-primary text-light mb-2 btn-lg" style="width: 250px; font-size: 20pt;">Change Password</a>
     </div>

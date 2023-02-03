@@ -17,8 +17,8 @@ var_dump($_SESSION['user']->id);
 </div>
 
 
-<div class="container my-5 rounded">
-    <div class="w-50 border rounded border-white container bg-light p-4" style="filter: opacity(1)">
+<div class="container-fluid bg-dark py-3">
+    <div class="w-50 border rounded border-white container bg-light p-4">
         <div class="container">
             <h2 class="text-center">Choose new names: <br> anything goes</h2>
             <form method="POST" class="p-4">

@@ -17,20 +17,20 @@ global $genres;
 </div>
 
 
-<div class="container my-5">
-
-    <div class="row text-center border border-dark rounded container px-0" style="filter: opacity(1)">
-
+<div class="container-fluid bg-dark py-5 d-flex align-items-center justify-content-center">
+    <div class="hoverRed row d-flex text-center border border-dark rounded container px-0">
         <?php foreach ($genres as $genre): ?>
-        <div class="px-0 bg-dark m-3 rounded text-center" style="width: 200px">
-            <a class='hoverRed btn btn-dark text-primary text-decoration-none w-100 rounded p-0 text-center' href="/songs/<?= $genre->id ?>">
-                <div style="font-size: 16pt;" class="hoverRed card-title text-center""><?= $genre->name ?></div>
-        </a>
+            <div class="px-1 py-1 d-flex align-items-center justify-content-center col-4 bg-dark hoverRed rounded text-center">
+                <a class='border hoverRed btn btn-dark text-primary text-decoration-none w-100 rounded p-0 g-0 text-center d-flex align-items-center justify-content-center' href="/songs/<?= $genre->id ?>">
+                    <div style="font-size: 16pt;" class="hoverRed card-title">
+                        <?= $genre->name ?>
+                    </div>
+                </a>
+            </div>
+        <?php endforeach; ?>
     </div>
-    <?php endforeach; ?>
+</div>
 
-</div>
-</div>
 
 
 
